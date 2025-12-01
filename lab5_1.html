@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Завдання 1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Завдання 1: Видалення 'A' після коми та підрахунок пар 'BC'</h2>
+<script>
+let text = "ABAC,AA,BCBC,BC,AB";
+document.write("<p>Початковий рядок: <span class='result'>" + text + "</span></p>");
+
+let modified = text.replace(/,(A)/g, ',');
+document.write("<p>Після видалення 'A' після коми: <span class='result'>" + modified + "</span></p>");
+
+let bcCount = (modified.match(/BC/g) || []).length;
+document.write("<p>Кількість пар 'BC': <span class='result'>" + bcCount + "</span></p>");
+</script>
+
+</body>
+</html>

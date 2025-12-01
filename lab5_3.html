@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Завдання 3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Завдання 3: Просте шифрування - наступна літера в алфавіті</h2>
+<script>
+let text = "привіт, світ";
+document.write("<p>Початковий рядок: <span class='result'>" + text + "</span></p>");
+
+function nextLetter(char){
+    const alphabet = 'абвгґдеєжзиіїйклмнопрстуфхцчшщьюя';
+    let lower = char.toLowerCase();
+    let index = alphabet.indexOf(lower);
+    if(index === -1) return char;
+    let next = alphabet[(index+1)%alphabet.length];
+    return char === char.toUpperCase() ? next.toUpperCase() : next;
+}
+
+let encrypted = Array.from(text).map(nextLetter).join('');
+document.write("<p>Зашифрований рядок: <span class='result'>" + encrypted + "</span></p>");
+</script>
+
+</body>
+</html>

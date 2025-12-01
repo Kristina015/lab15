@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Завдання 2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Завдання 2: Кількість слів з літерою 'і' та обмін першого і другого слова</h2>
+<script>
+let text = "Інформація,тест,місто,дані";
+document.write("<p>Початковий рядок: <span class='result'>" + text + "</span></p>");
+
+let words = text.split(/,|\s+/);
+let iCount = words.filter(word => /і/i.test(word)).length;
+document.write("<p>Кількість слів з літерою 'і': <span class='result'>" + iCount + "</span></p>");
+
+if(words.length >= 2){
+    [words[0], words[1]] = [words[1], words[0]];
+}
+document.write("<p>Після обміну першого і другого слова: <span class='result'>" + words.join(", ") + "</span></p>");
+</script>
+
+</body>
+</html>

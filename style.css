@@ -1,0 +1,33 @@
+body {
+            font-family: Arial, sans-serif;
+            background: 	#87CEFA;
+            margin: 0;
+            padding: 40px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .task {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        a {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background: #007bff;
+            border-radius: 6px;
+        }
+        a:hover {
+            background: #0000FF;
+        }

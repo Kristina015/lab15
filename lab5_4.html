@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Завдання 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Завдання 4: Перемішування букв у словах, крім першої та останньої</h2>
+<script>
+let text = "привіт світ приклад";
+document.write("<p>Початковий рядок: <span class='result'>" + text + "</span></p>");
+
+function shuffleWord(word){
+    if(word.length <= 3) return word;
+    let middle = word.slice(1, -1).split('');
+    for(let i=middle.length-1; i>0; i--){
+        let j = Math.floor(Math.random()*(i+1));
+        [middle[i], middle[j]] = [middle[j], middle[i]];
+    }
+    return word[0] + middle.join('') + word[word.length-1];
+}
+
+let shuffled = text.split(" ").map(shuffleWord).join(" ");
+document.write("<p>Після перемішування букв: <span class='result'>" + shuffled + "</span></p>");
+</script>
+
+</body>
+</html>
